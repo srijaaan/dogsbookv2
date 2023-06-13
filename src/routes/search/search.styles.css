@@ -1,0 +1,22 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.s130 {
+    min-height: 85vh;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    background: url(../../assests/Searchs_130.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 85%;
+    padding: 15px;
+}
+
