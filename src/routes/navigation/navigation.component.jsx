@@ -1,18 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "../../assests/logo.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [nav, setNav] = useState(false);
-  const handleNav = () => {
-    setNav(!nav);
-  };
+  let menuRef = useRef();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setNav(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, []);
+
+  useEffect(() => {
+    setNav(false);
+  }, [pathname]);
+
   return (
     <>
-      <div className="my-5 flex justify-between h-24 items-center text-white max-w-[1500px] mx-auto px-4 ">
+      <div
+        className="my-5 flex justify-between h-24 items-center text-white max-w-[1500px] mx-auto px-4 "
+        ref={menuRef}
+      >
         <Link to="/">
-          <img src={Logo} alt="" className=" w-64 md:w-80" />
+          <img src={Logo} alt="" className=" w-60 md:w-80" />
         </Link>
 
         <ul className="hidden md:flex">
@@ -32,7 +50,12 @@ const Navigation = () => {
             Contact
           </Link>
         </ul>
-        <div onClick={handleNav} className="block md:hidden">
+        <div
+          onClick={() => {
+            setNav(!nav);
+          }}
+          className="block md:hidden"
+        >
           {nav ? (
             <AiOutlineClose size={30} className=" cursor-pointer" />
           ) : (

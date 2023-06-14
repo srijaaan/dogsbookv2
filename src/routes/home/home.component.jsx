@@ -11,7 +11,7 @@ const Home = () => {
           </h3>
           <p className=" text-white text-lg items-center md:text-xl">
             Welcome to DOGSBOOK, here you can know all about me and my
-            brotherins. Also, you may fall in love with one of us and decide to
+            furry friends. Also, you may fall in love with one of us and decide to
             bring us home, in anyway thank you.
           </p>
         </div>

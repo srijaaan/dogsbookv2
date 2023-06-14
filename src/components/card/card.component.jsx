@@ -1,4 +1,5 @@
 import "./card.styles.css";
+
 const Card = ({ dog }) => {
   const { name, bred_for, temperament, life_span, image } = dog;
 

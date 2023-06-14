@@ -31,7 +31,9 @@ const Dog = () => {
   if (dogs !== undefined && serDog !== undefined) {
     url = dogs.find((dog) => dog.name === serDog[0].name).image.url;
   }
-
+  useEffect(()=>{
+    
+  },[])
   useEffect(() => {
     const getWiki = async () => {
       const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${dogName}`;

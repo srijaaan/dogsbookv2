@@ -27,7 +27,7 @@ const Random = () => {
         <hr className=" w-36 md:w-52 mt-3 border-2 rounded-sm mb-6" />
         <div className="grid grid-rows-3 md:grid-cols-3 gap-5 md:gap-10 md:h-[700px]">
           {dogs !== undefined
-            ? arr.map((dog) => <Card dog={dog} key={dog.id} />)
+            ? arr.map((dog) => <Card dog={dog} key={dog.id}/>)
             : console.log()}
         </div>
       </div>
