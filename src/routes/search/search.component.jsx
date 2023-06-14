@@ -10,14 +10,17 @@ const Search = () => {
     navigate(`/dog/${name}`);
   };
   return (
-    <div className="s130 items-center ">
+    <>
+    <div className="s130 items-center flex flex-col ">
       <ReactSearchAutocomplete
         className="w-96 md:w-[700px] -mt-48 scale=110 md:scale-125"
         placeholder="Enter the breed here..."
         items={dogs !== null ? dogs : console.log("error")}
         onSelect={handleOnSelect}
       />
+    <span className="mt-10 text-white">*If search results don't appear please reload*</span>
     </div>
+    </>
   );
 };
 

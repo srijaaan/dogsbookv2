@@ -8,7 +8,7 @@ const Card = ({ dog }) => {
       <img
         src={image.url}
         alt="dog"
-        className="w-[300px] sm:w-[400px] md:w-[350px] lg:w-[450px] h-auto rounded-xl"
+        className="w-[300px] sm:w-[400px] md:w-[350px] lg:w-[450px] max-h-[400px] h-auto rounded-xl"
       />
       <div className=" text-center p-6">
         <h1 className="text-xl font-semibold mb-5">{name}</h1>
