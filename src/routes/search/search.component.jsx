@@ -13,7 +13,7 @@ const Search = () => {
     <>
     <div className="s130 items-center flex flex-col ">
       <ReactSearchAutocomplete
-        className="w-96 md:w-[700px] -mt-48 scale=110 md:scale-125"
+        className="w-96 md:w-[700px] -mt-48 scale=110 md:scale-125 px-5"
         placeholder="Enter the breed here..."
         items={dogs !== null ? dogs : console.log("error")}
         onSelect={handleOnSelect}
