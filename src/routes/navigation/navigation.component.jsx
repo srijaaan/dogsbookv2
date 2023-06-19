@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "../../assests/logo.png";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import './navigation.styles.css'
 
 const Navigation = () => {
   const [nav, setNav] = useState(false);
@@ -34,20 +35,20 @@ const Navigation = () => {
         </Link>
 
         <ul className="hidden md:flex">
-          <Link className="p-4 md:text-xl md:font-semibold" to="/">
+          <Link className="p-4 md:text-xl md:font-semibold hover:text-[#f7d7ca]" to="/">
             Home
           </Link>
-          <Link className="p-4 md:text-xl md:font-semibold" to="random">
+          <Link className="p-4 md:text-xl md:font-semibold hover:text-[#f7d7ca]" to="random">
             Random
           </Link>
-          <Link className="p-4 md:text-xl md:font-semibold" to="search">
+          <Link className="p-4 md:text-xl md:font-semibold hover:text-[#f7d7ca]" to="search">
             Search
           </Link>
-          <Link className="p-4 md:text-xl md:font-semibold" to="about">
+          <Link className="p-4 md:text-xl md:font-semibold hover:text-[#f7d7ca]" to="about">
             About
           </Link>
-          <Link className="p-4 md:text-xl md:font-semibold" to="contact">
-            Contact
+          <Link to="contact">
+            <button className="ctnbtn mt-2">Contact Us</button>
           </Link>
         </ul>
         <div

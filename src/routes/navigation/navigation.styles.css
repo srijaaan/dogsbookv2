@@ -1,0 +1,26 @@
+.ctnbtn {
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-width: 0;
+    background-color: #fdb99b;
+    outline: 0;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
+    font-family: Montserrat;
+    font-weight: 650;
+    font-size: 1rem;
+    color: #fff;
+}
+.ctnbtn:hover {
+    background-color: #fb8350;
+}
+.ctnbtn:active {
+    background-color: #fb8350;
+    -webkit-box-shadow: 0 1px #666;
+    box-shadow: 0 1px #666;
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+}
